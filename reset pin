@@ -1,0 +1,31 @@
+#include <Stepper.h>
+ 
+
+const int stepsPerRevolution = 20; 
+ 
+
+Stepper myStepperY(stepsPerRevolution, 2,3,4,5);
+Stepper myStepperX(stepsPerRevolution, 8,9,10,11); 
+ 
+void setup() {
+
+ myStepperY.setSpeed(100);
+ myStepperX.setSpeed(50);
+ 
+ 
+ myStepperX.step(100);
+ delay(1000);
+ myStepperX.step(-100);
+ delay(1000);
+ 
+
+ myStepperY.step(5);
+ delay(1000);
+ myStepperY.step(-0);
+ delay(1000);
+ 
+
+}
+void loop() {
+ // Leer 
+}
